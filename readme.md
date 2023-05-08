@@ -15,8 +15,8 @@ In this report, we share our experience of working with ChatGPT 3.5, how we used
 
 To illustrate more about the game, we have provided a demo video of the game that you can see below (though, as you might notice, the game in the demo video was not finished yet, it covered all the necessary functionalities):
 
-https://github.com/lareza-farhan-wanaghi/DiplomaProjectGPT/blob/master/images/demo.mp4
-<br><br>
+https://lareza-farhan-wanaghi.github.io/media/other/deiploma_project_demo.mp4
+<br>
 
 ### Scripting
 
