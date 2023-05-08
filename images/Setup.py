@@ -3,8 +3,8 @@ from PIL import Image
 import pathlib
 
 mediaDirectory = os.path.join(os.getcwd(), "./")
-uncompressedDirectory = "conversation"
-compressedDirectory = "conversations"
+uncompressedDirectory = "conversations"
+compressedDirectory = "conversations-test"
 
 
 def ConvertAllPngToWebp(source):
@@ -21,6 +21,7 @@ def ConvertAllPngToWebp(source):
         if not os.path.exists(newname):
             os.makedirs(newd, exist_ok=True)
             image = Image.open(oldname)
+            image = image.resize((image.size[0] // 2, image.size[1] // 2))
             image.convert("RGB").save(newname, format="jpeg", optimize=True, quality=20)
 
 
