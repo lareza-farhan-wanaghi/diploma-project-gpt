@@ -39,7 +39,7 @@ Next, we asked the AI to create a scene loader component that would play an anim
 
 <img src="images/conversations/1/3-a.jpg" width="50%">
 <img src="images/conversations/1/3-b.jpg" width="50%">
-<img src="images/conversations/1/3-x.jpg" width="50%"><br><br>
+<img src="images/conversations/1/3-c.jpg" width="50%"><br><br>
 
 Once the AI generated the script, we then requested it to make the prologue system call a method in the scene loader when the player completed showing all of the prologue data.
 <br><br>
