@@ -30,6 +30,8 @@ public class EventSystem : MonoBehaviour
     private EventData currentEventData;
     private Action<IngameEventType, string> eventAction;
 
+    public bool resetData;
+
     private void Awake()
     {
         if (instance == null)
@@ -41,11 +43,30 @@ public class EventSystem : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void Start(){
+        if (resetData)
+        {
+            PhotoStorage.Instance.Reset();
+        }
+    }
 
     public void TriggerEvent(EventData eventData)
     {
         currentEventData = eventData;
-        eventText.text = "Press K to " + currentEventData.eventType.ToString();
+        var instruksi ="";
+        switch(currentEventData.eventType){
+            case IngameEventType.AddingAPhoto:
+                instruksi= "menambahkan foto";
+                break;
+            case IngameEventType.TakingAPhoto:
+                instruksi= "berfoto";
+                break;
+            case IngameEventType.TalkingWithNPC:
+                instruksi= "berbincang";
+                break;
+        }
+
+        eventText.text = "Tekan K untuk " + instruksi;
         eventText.gameObject.SetActive(true);
     }
 
@@ -79,7 +100,8 @@ public class EventSystem : MonoBehaviour
                 DialogueData dialogueData = Resources.Load<DialogueData>("Dialogues/" + npc.DialogueData);
                 if (dialogueData != null)
                 {
-                    DialogueSystem.instance.ShowDialogue(dialogueData);
+                    DialogueSystem.instance.SetDialogue(dialogueData);
+                    AudioManager.instance.PlayAudioSource (npc.soundIndex);
                     npc.DialogueData = null;
                 }
                 break;

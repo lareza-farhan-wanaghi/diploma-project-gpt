@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 585eadc3a545c4cf194fcab7fe287dac, type: 3}
   m_Name: Q-1
   m_EditorClassIdentifier: 
-  title: FInd Test Photo
-  npcName: NPC-1
-  completionDialogue: D-2-5
+  title: Pemandangan Indah
+  npcName: Panca
+  completionDialogue: D-4-1
   objectives:
   - {fileID: 11400000, guid: 9df39ad9301cd4874a0352e7da9b8eef, type: 2}

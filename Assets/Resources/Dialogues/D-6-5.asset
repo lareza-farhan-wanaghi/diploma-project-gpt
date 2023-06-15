@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
+  m_Name: D-6-5
+  m_EditorClassIdentifier: 
+  conversantName: Panca
+  dialogueText: Semoga Beruntung.
+  nextDialogue: {fileID: 0}
+  onEnterCallbacks: []
+  onExitCallbacks:
+  - {fileID: 11400000, guid: 1db3d393e75654ccba68d24665b2fd27, type: 2}
+  - {fileID: 11400000, guid: 89bd5db77e96041c1af6410a2b1e01e0, type: 2}
+  - {fileID: 11400000, guid: a2f3a5822c1284636991e7ab17f5745e, type: 2}
+  - {fileID: 11400000, guid: 937994de426484fb88aa4c7b2a06ec44, type: 2}

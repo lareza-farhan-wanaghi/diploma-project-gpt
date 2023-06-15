@@ -1,6 +1,6 @@
 # Diploma Project - GPT
 
-![Completion status: On-Going](https://img.shields.io/badge/COMPLETION%20STATUS-ON--GOING-blue?style=for-the-badge)
+![Completion status: completed](https://img.shields.io/badge/COMPLETION%20STATUS-COMPLETED-success?style=for-the-badge)
 
 
 ## Introduction

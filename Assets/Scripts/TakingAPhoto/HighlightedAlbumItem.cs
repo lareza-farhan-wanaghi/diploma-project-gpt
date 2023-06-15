@@ -19,17 +19,19 @@ public class HighlightedAlbumItem : MonoBehaviour
         {
             instance = this;
         }
-        HideHighlight();
+        // HideHighlight();
     }
 
     public void ShowHighlight(Sprite sprite)
     {
+        AudioManager.instance.PlayAudioSource(0);
         container.SetActive(true);
         image.sprite = sprite;
     }
 
     public void HideHighlight()
     {
+        AudioManager.instance.PlayAudioSource(0);
         container.SetActive(false);
     }
 }

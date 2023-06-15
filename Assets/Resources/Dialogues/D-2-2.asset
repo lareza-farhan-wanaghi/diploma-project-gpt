@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
   m_Name: D-2-2
   m_EditorClassIdentifier: 
-  conversantName: Albert Test
-  dialogueText: Testing.. Testing..1..2..3..
+  conversantName: Panca
+  dialogueText: Selamat datang di salah satu 5 destinasi super prioritas Indonesia,
+    Danau Toba!
   nextDialogue: {fileID: 11400000, guid: 3fb66a97ce6eb419480d80f02b22aa9f, type: 2}
-  onEnterCallbacks:
-  - {fileID: 11400000, guid: 01ee793fdff6748099d7bcbe4844ff1e, type: 2}
+  onEnterCallbacks: []
   onExitCallbacks: []

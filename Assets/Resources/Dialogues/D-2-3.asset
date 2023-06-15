@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
   m_Name: D-2-3
   m_EditorClassIdentifier: 
-  conversantName: Albert Test
-  dialogueText: Follow me!
-  nextDialogue: {fileID: 0}
-  onEnterCallbacks:
-  - {fileID: 11400000, guid: f9b3efcf520a24d0f8b45ceb9ea100b9, type: 2}
-  onExitCallbacks:
-  - {fileID: 11400000, guid: 9b5859dc0a347470cb626d6f51001eb8, type: 2}
+  conversantName: Alberttt
+  dialogueText: 'Halo juga Panca. Sudah hampir 3 tahun kita tidak berjumpa. Terakhir
+    kali kita bertemu di Uni Soviet. '
+  nextDialogue: {fileID: 11400000, guid: 6c6a0f3c796c54c65b9b9fd1b3f497a6, type: 2}
+  onEnterCallbacks: []
+  onExitCallbacks: []

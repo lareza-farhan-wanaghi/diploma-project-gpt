@@ -1,6 +1,7 @@
 using RotaryHeart.Lib.SerializableDictionary;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [System.Serializable]
 public class PhotoStorage : MonoBehaviour
@@ -22,6 +23,12 @@ public class PhotoStorage : MonoBehaviour
         }
     }
 
+    public void Reset(){
+        string[] a=takenPhotos.Keys.ToArray();
+        foreach(string kv in a){
+            takenPhotos[kv] = false;
+        }
+    }
     public void AddPhoto(string photoName)
     {
         takenPhotos[photoName] = true;

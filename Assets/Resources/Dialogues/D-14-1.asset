@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
+  m_Name: D-14-1
+  m_EditorClassIdentifier: 
+  conversantName: Panca
+  dialogueText: Nah, itu dia tempat-tempat iconik yang ada di sekitar Danau Toba.
+    Selanjutnya kita akan kembali ketempat titik kumpul para wisatawan.
+  nextDialogue: {fileID: 11400000, guid: 647ed9a5d4d834ad682295546d36e618, type: 2}
+  onEnterCallbacks: []
+  onExitCallbacks:
+  - {fileID: 11400000, guid: c87c99b33346249da9edaae6b5d8617a, type: 2}

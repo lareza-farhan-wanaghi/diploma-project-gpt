@@ -6,4 +6,5 @@ public class QuestObjective : ScriptableObject
     public IngameEventType eventType;
     public string target;
     public int quantity;
+    public string description;
 }

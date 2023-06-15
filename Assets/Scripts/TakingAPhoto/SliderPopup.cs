@@ -40,4 +40,8 @@ public class SliderPopup : MonoBehaviour
     {
         popupGameobject.SetActive(false);
     }
+
+    public void CameraShutterSound(){
+        AudioManager.instance.PlayAudioSource(1);
+    }
 }

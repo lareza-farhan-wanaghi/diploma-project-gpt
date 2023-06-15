@@ -4,10 +4,13 @@ using UnityEngine.UI;
 public class AlbumItem : MonoBehaviour
 {
     [SerializeField] private Image albumImage;
+    bool isTaken;
 
-    public void SetSprite(Sprite sprite)
+    public void SetSprite(Sprite sprite, bool _isTaken)
     {
         albumImage.sprite = sprite;
+        isTaken =_isTaken;
+        SetColor(isTaken);
     }
 
     public void SetColor(bool isTaken)
@@ -17,6 +20,9 @@ public class AlbumItem : MonoBehaviour
 
     public void OnClick()
     {
-        HighlightedAlbumItem.Instance.ShowHighlight(albumImage.sprite);
+        if (isTaken)
+        {
+            HighlightedAlbumItem.Instance.ShowHighlight(albumImage.sprite);
+        }
     }
 }

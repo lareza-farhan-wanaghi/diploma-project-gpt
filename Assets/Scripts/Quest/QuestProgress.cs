@@ -14,7 +14,8 @@ public class QuestProgress
         GameObject questProgressUIGO = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/QuestProgressUI"), GameObject.Find("QuestProgressUIContainer").transform);
         questProgressUI = questProgressUIGO.GetComponent<QuestProgressUI>();
         questProgressUI.SetText(this);
-        AnimatedText.instance.ShowText("New Quest Added"); // added line to show animated text
+        AnimatedText.instance.ShowText("Misi Baru Ditambahkan!"); // added line to show animated text
+        AudioManager.instance.PlayAudioSource(3);
     }
 
     public void UpdateObjectiveProgress(IngameEventType eventType, string target)
@@ -43,6 +44,7 @@ public class QuestProgress
     public void DestroyQuestProgressUI()
     {
         questProgressUI.DestroySelf();
-        AnimatedText.instance.ShowText("Quest completed"); // added line to show animated text
+        AnimatedText.instance.ShowText("Misi Selesai!"); // added line to show animated text
+        AudioManager.instance.PlayAudioSource(2);
     }
 }

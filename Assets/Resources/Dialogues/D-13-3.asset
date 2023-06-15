@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
+  m_Name: D-13-3
+  m_EditorClassIdentifier: 
+  conversantName: Panca
+  dialogueText: 'Namun sekarang pengadilan ini sudah tidak diberlakukan lagi dan
+    hanya sebagai salah satu peninggalan bersejarah pulau Samosir. '
+  nextDialogue: {fileID: 11400000, guid: 0c02c02ad391a4983b325c7201a73ce6, type: 2}
+  onEnterCallbacks: []
+  onExitCallbacks: []

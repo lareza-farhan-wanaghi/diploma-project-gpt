@@ -10,23 +10,30 @@ public class NPC : MonoBehaviour
     private QuestProgress questProgress;
     private NavMeshAgent navAgent;
     private NPCNavigationCallback navigation;
+    [SerializeField] Animator anim;
+    [SerializeField] SpriteRenderer charRenderer;
+    [SerializeField] GameObject followMe;
+    public int soundIndex;
 
     public string DialogueData
     {
         get { return dialogueData; }
-        set { dialogueData = value; }
+        set { dialogueData = value; UpdateNotifySprite();}
     }
 
     private void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
-        navAgent.updateRotation = false;
+        if (navAgent!= null)
+{        navAgent.updateRotation = false;
         navAgent.updateUpAxis = false;
+        }
     }
 
     private void Start()
     {
         EventSystem.instance.AddEventListener(EventListener);
+        UpdateNotifySprite();
     }
 
     private void OnDestroy()
@@ -89,27 +96,41 @@ public class NPC : MonoBehaviour
 
     public void SetNavigation(NPCNavigationCallback navigation)
     {
+        notifyRenderer.sprite = null;
+        followMe.SetActive(true);
+        AudioManager.instance.PlayAudioSource(4);
         StartCoroutine(SetNavigationCoroutine(navigation));
     }
 
     private IEnumerator SetNavigationCoroutine(NPCNavigationCallback navigation)
     {
         yield return new WaitForSeconds(0.2f);
+        
         GameObject target = GameObject.Find(navigation.navigationTarget);
         if (target != null)
         {
             navAgent.SetDestination(target.transform.position);
         }
         this.navigation = navigation;
+        anim.SetBool("run",true);
     }
 
     private void Update()
     {
-        if (navigation != null && !navAgent.pathPending && navAgent.remainingDistance < 0.1f)
+        if (navigation != null && !navAgent.pathPending )
         {
-            DialogueData = navigation.dialogue;
-            UpdateNotifySprite();
-            navigation = null;
+            
+            charRenderer.flipX = navAgent.velocity.x > 0;
+            if(navAgent.remainingDistance < 0.1f)
+            {
+                DialogueData = navigation.dialogue;
+                UpdateNotifySprite();
+                navigation = null;
+                charRenderer.flipX = false;
+                anim.SetBool("run",false);
+                followMe.SetActive(false);
+            }
+
         }
     }
 }

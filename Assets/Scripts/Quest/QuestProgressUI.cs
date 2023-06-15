@@ -16,7 +16,7 @@ public class QuestProgressUI : MonoBehaviour
             {
                 objectiveString += "<color=green>";
             }
-            objectiveString += "- " + questProgress.quest.objectives[i].eventType.ToString() + " " + questProgress.objectiveProgress[i] + " / " + questProgress.quest.objectives[i].quantity + "\n";
+            objectiveString += "- " + questProgress.quest.objectives[i].description+ " " + questProgress.objectiveProgress[i] + " / " + questProgress.quest.objectives[i].quantity + "\n";
             if (questProgress.objectiveProgress[i] >= questProgress.quest.objectives[i].quantity)
             {
                 objectiveString += "</color>";

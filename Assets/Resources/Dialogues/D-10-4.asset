@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
+  m_Name: D-10-4
+  m_EditorClassIdentifier: 
+  conversantName: Alberttt
+  dialogueText: Begitu pula dengan tempat-tempat identik yang ada di sekitar sini.
+  nextDialogue: {fileID: 11400000, guid: b9e898c192e474e17ab23dc4bafc5525, type: 2}
+  onEnterCallbacks: []
+  onExitCallbacks: []

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
   m_Name: D-2-5
   m_EditorClassIdentifier: 
-  conversantName: Albert Test
-  dialogueText: You completed the mission
-  nextDialogue: {fileID: 0}
+  conversantName: Albertt
+  dialogueText: 'Tapi, aku bingung ingin memulainya dari mana. Apakah kamu bisa membantuku? '
+  nextDialogue: {fileID: 11400000, guid: 8b14c6bc5b49141e1ae0e1a768718df2, type: 2}
   onEnterCallbacks: []
-  onExitCallbacks:
-  - {fileID: 11400000, guid: 4a41246ca634c49a1a4561591107c073, type: 2}
+  onExitCallbacks: []

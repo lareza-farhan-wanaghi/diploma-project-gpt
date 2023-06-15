@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b51908566a0848679514df66cda4d12, type: 3}
   m_Name: D-2-4
   m_EditorClassIdentifier: 
-  conversantName: Albert Test
-  dialogueText: Go Taking a Photo!
-  nextDialogue: {fileID: 0}
+  conversantName: Alberttt
+  dialogueText: Kali ini aku ingin mengeksplor Danau Toba dan ber-swafoto.
+  nextDialogue: {fileID: 11400000, guid: 6a8b68d3268ff418a9c62439f1dc509a, type: 2}
   onEnterCallbacks: []
-  onExitCallbacks:
-  - {fileID: 11400000, guid: 7d84aa572142e4703996963ebe029085, type: 2}
-  - {fileID: 11400000, guid: 4275f4342b1df48828301e742f6c395f, type: 2}
+  onExitCallbacks: []

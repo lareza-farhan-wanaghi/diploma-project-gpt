@@ -28,6 +28,8 @@ public class SliderMiniGame : MonoBehaviour
 
     public void StartMiniGame(string miniGameString)
     {
+        FindObjectOfType<MainCharacter>().SetEnableInputs(false);
+
         this.miniGameString = miniGameString;
 
         // Enable the slider game object and reset its value to 0.5
@@ -84,6 +86,7 @@ public class SliderMiniGame : MonoBehaviour
                         Sprite photoSprite = Resources.Load<Sprite>("Photos/" + miniGameString);
                         SliderPopup.Instance.Show(photoSprite);
                         GameObject.Find(miniGameString).SetActive(false);
+                        FindObjectOfType<MainCharacter>().SetEnableInputs(true);
                     }
                     else
                     {

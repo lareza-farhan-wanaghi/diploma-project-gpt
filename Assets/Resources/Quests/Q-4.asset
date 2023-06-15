@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585eadc3a545c4cf194fcab7fe287dac, type: 3}
+  m_Name: Q-4
+  m_EditorClassIdentifier: 
+  title: Batu Persidangan
+  npcName: Panca
+  completionDialogue: D-14-1
+  objectives:
+  - {fileID: 11400000, guid: f62551d11de1846d9bc0fccb008444ab, type: 2}

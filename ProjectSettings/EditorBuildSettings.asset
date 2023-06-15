@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ingame-1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Cutscene1.unity
+    guid: fa766a443caf941e5a043f3f357401d4
+  - enabled: 1
+    path: Assets/Scenes/Ingame-2.unity
+    guid: a9898d8d89fb543bca1412c82fb9f26a
+  - enabled: 1
+    path: Assets/Scenes/Cutscene2.unity
+    guid: c27dcfd54aefc407eae90c9df7807eab
   m_configObjects: {}

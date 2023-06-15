@@ -5,18 +5,21 @@ using UnityEngine;
 public class MainCharacter : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    private Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
     private Vector2 movement;
+    private bool enableInputs = true;
+    [SerializeField] Animator anim;
+    [SerializeField] SpriteRenderer charRenderer;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
     private void Update()
     {
+        if(!enableInputs) return;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        anim.SetBool("run", movement.magnitude >0);
+        charRenderer.flipX=movement.x>0;
     }
 
     private void FixedUpdate()
@@ -26,6 +29,8 @@ public class MainCharacter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!enableInputs) return;
+        
         if (other.gameObject.CompareTag("npc"))
         {
             NPC npc = other.gameObject.GetComponent<NPC>();
@@ -44,5 +49,12 @@ public class MainCharacter : MonoBehaviour
     {
         EventSystem.instance.ClearEventData();
         EventSystem.instance.DisableEventTextUI();
+    }
+
+    public void SetEnableInputs(bool _enableInputs){
+        enableInputs = _enableInputs;
+        movement = Vector2.zero;
+        anim.SetBool("run", false);
+        charRenderer.flipX=false;
     }
 }

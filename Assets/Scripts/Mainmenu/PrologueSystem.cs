@@ -6,15 +6,21 @@ using UnityEngine.UI;
 public class PrologueSystem : MonoBehaviour
 {
     public List<PrologueData> prologueDataList;
-    public Image imageUI;
     public TextMeshProUGUI textUI;
     public SceneLoader sceneLoader;
-
+    [SerializeField] Animator prologAnim;
     private int currentDataIndex = 0;
+    [SerializeField] bool isAutoShow = false;
 
     void Start()
     {
-        gameObject.SetActive(false);
+        
+        if(isAutoShow){
+            ShowPrologue();
+        }
+        else{
+            gameObject.SetActive(false);
+        }
     }
 
     public void ShowPrologue()
@@ -25,22 +31,22 @@ public class PrologueSystem : MonoBehaviour
 
     void ShowData(int dataIndex)
     {
+        currentDataIndex = dataIndex;
         if (dataIndex >= prologueDataList.Count)
         {
+            prologAnim.PlayInFixedTime("Hide",0,0);
             sceneLoader.LoadScene();
             return;
         }
 
         PrologueData data = prologueDataList[dataIndex];
-        imageUI.sprite = data.image;
         textUI.text = data.text;
-
-        currentDataIndex = dataIndex;
+        prologAnim.PlayInFixedTime("Show",0,0);        
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) && currentDataIndex < prologueDataList.Count )
         {
             ShowData(currentDataIndex + 1);
         }
