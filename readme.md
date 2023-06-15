@@ -13,9 +13,7 @@ In this report, we share our experience of working with ChatGPT 3.5, how we used
 
 "Petualangan Danau Toba" is a top-down game that takes place in Toba Lake, North Sumatra, Indonesia. The game's objective is to promote Indonesian tourism and educate players about Toba Lake's natural beauty and cultural significance. The game consists of several mini-games, including a slider mini-game and a taking photos mini-game, which challenge players to interact with the game environment and learn about the lake's various features.
 
-To illustrate more about the game, we have provided a demo video of the game that you can see below (though, as you might notice, the game in the demo video was not finished yet, it covered all the necessary functionalities):
-
-https://raw.githubusercontent.com/lareza-farhan-wanaghi/DiplomaProjectGPT/master/images/demo.mp4
+To get a better understanding of the game, we have deployed the sample game on the itch.io platform that you can find [here](https://lareza-farhan-wanaghi.itch.io/2d-rpg-danau-toba).
 <br>
 
 ### Scripting
